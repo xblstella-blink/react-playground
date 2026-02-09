@@ -1,35 +1,44 @@
-.App{
-    text-align:center;
+.App {
+  text-align: center;
 }
 
 .container {
-    max-width:80%;
-    padding: 0 15px;
-    margin: 0 auto;
+  max-width: 80%;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .list-group {
-    display:flex;
-    flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 
-.list-group-item{
-    position: relative;
-    display:blcok;
-    padding:0.75rem 1.25rem;
-    margin-bottom:-1px;
-    border:1px solid rgba(0,0,0,0,125);
+.list-group-item {
+  list-style: none;
+  position: relative;
+  display: blcok;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.pagination{
-    display:flex;
-    list-style:none;
-    border-radius:0.25rem;
-    flex-wrap:wrap;
+.pagination {
+  display: flex;
+  list-style: none;
+  border-radius: 0.25rem;
+  flex-wrap: wrap;
 }
 
 .page-link {
-    color:#0d7bff;
-    background:white;
-    border:1px solid #dee2e6
+  color: #0d7bff;
+  background: white;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  text-decoration: none;
+}
+
+.active-page {
+  background-color: lightblue;
+  color: #fff;
 }
