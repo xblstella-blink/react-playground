@@ -1,17 +1,20 @@
-const Pagination = () => {
+const Pagination = ({paginate, postsPerPage,currentPage, totalPosts}) => {
+    const pageNumbers = [];
+    for (let i =1; i<= Math.ceil(totalPosts/postsPerPage); i++){
+        pageNumbers.push(i);
+    }
   return (
     <nav>
       <ul className="pagination">
-        <li>
-          <a href="#" className="page-link active-page">
-            1
+        {pageNumbers.map((page) => (
+            <li key={page} className="page-item">
+                <a 
+                onClick={() => paginate(page)}
+                href="#" className={`page-link ${currentPage === page ? "active-page" :""}`}>
+            {page}
           </a>
-        </li>
-        <li>
-          <a href="#" className="page-link">
-            2
-          </a>
-        </li>
+            </li>
+        ))}
       </ul>
     </nav>
   );

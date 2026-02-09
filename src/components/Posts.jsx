@@ -1,8 +1,16 @@
-const Posts = () => {
+const Posts = ({currentPosts, loading}) => {
+    if(loading) {
+        return <h2>Loading...</h2>
+    }
   return (
     <ul className="list-group">
-      <li className="list-group-item">hello world</li>
-      <li className="list-group-item">hello world</li>
+      {currentPosts.length > 0 && currentPosts.map(post=>(
+            <li key={post.id} className='list-group-item'>
+                {post.title}
+
+            </li>
+        ))
+      }
     </ul>
   );
 };

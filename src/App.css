@@ -36,6 +36,8 @@
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   text-decoration: none;
+  margin-bottom: 1rem;
+  display:inline-block;
 }
 
 .active-page {
